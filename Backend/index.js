@@ -16,7 +16,7 @@ const app= express();
 
 //to except the request from any url 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://virtualassistantfrontend-nnvc.onrender.com",
     credentials:true
 }))
 
