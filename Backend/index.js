@@ -16,10 +16,14 @@ const app= express();
 
 //to except the request from any url 
 app.use(cors({
-    origin:"https://virtualassistantfrontend-nnvc.onrender.com",
-    credentials:true
-}))
-
+    origin: [
+        "http://localhost:5173",
+        "https://virtualassistantfrontend-nnvc.onrender.com",
+       
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+}));
 //to convert the data into json
 app.use(express.json());
 
